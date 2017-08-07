@@ -1,4 +1,18 @@
-- name: 'Sébastien Saunier'
-  github_nickname: 'ssaunier'
-- name: 'Boris Paillard'
-  github_nickname: 'Papillard'
+sebastien:
+  name: "Sébastien Saunier"
+  city: "paris"
+  description: "Charming room in Montmarte"
+  username: "ssaunier"
+  stars: 5
+boris:
+  name: "Boris Paillard"
+  city: "berlin"
+  description: "Small flat in Berlin"
+  username: "papillard"
+  stars: 4
+romain:
+  name: "Romain Paillard"
+  city: "london"
+  description: "Nice flat in Picadilly"
+  username: "monsieurpaillard"
+  stars: 3
