@@ -4,7 +4,56 @@
 <% flat = data.flats[owner] %>
 
 <!-- Inject flat data in template -->
-<%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
-<p><%= flat.name %></p>
-<h1><%= flat.description %></h1>
-<p><%= flat.city_name %></p>
+<div class="flat-banner" style="background-image:url('https://kitt.lewagon.com/placeholder/cities/<%= "#{flat.city_slug}" %>');">
+  <div class="banner-content">
+    <h1><%= flat.city_name %></h1>
+  </div>
+</div>
+<div class="flat-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+      <div class="profile-info">
+        <div class="profile-pic">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
+            <p><%= flat.name %></p>
+          </div>
+        <div class="flat-info">
+            <p><%= flat.city_name %></p>
+            <p><%= flat.description %></p>
+            <% non_highlighted = 5 - flat.rating %>
+            <p>
+            <% flat.rating.times do %>
+            <i class="fa fa-star highlighted"></i>
+            <% end %>
+            <% non_highlighted.times do%>
+            <i class="fa fa-star"></i>
+            <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <div class="form-container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <form action="#">
+            <h4 class="text-center">Book your room</h4>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="check-in" placeholder="check-in">
+                  </div>
+                </div>
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="check-out" placeholder="check-out">
+                    </div>
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
